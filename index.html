@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gloria Li — Computer Science, Carleton University</title>
+<meta name="description" content="Gloria Li — Computer Science student at Carleton University. Government tech co-ops, full-stack &amp; database projects, competitive taekwondo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,460;0,9..144,560;0,9..144,650;1,9..144,460;1,9..144,560&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="topnav-mark">
+    <span class="seal">GL</span>
+    <span class="txt">FILE NO. 2022–PRESENT<br>CARLETON&nbsp;·&nbsp;OTTAWA</span>
+  </div>
+  <ul class="topnav-tabs">
+    <li><button class="tab-btn active" onclick="goTo('home',this)">Home</button></li>
+    <li><button class="tab-btn" onclick="goTo('experience',this)">Experience</button></li>
+    <li><button class="tab-btn" onclick="goTo('projects',this)">Projects</button></li>
+    <li><button class="tab-btn" onclick="goTo('skills',this)">Skills</button></li>
+    <li><button class="tab-btn" onclick="goTo('athletics',this)">Taekwondo</button></li>
+    <li><button class="sound-toggle" id="soundToggle" onclick="toggleSound(this)" aria-pressed="false">
+      <span class="bars"><span></span><span></span><span></span></span>
+      <span class="lbl">Sound</span>
+    </button></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="home-grid">
+    <div class="home-left">
+      <div class="file-eyebrow">Personnel file</div>
+
+      <div class="photo-frame">
+        <img src="assets/gloria-li.jpg" alt="Gloria Li">
+        <svg class="photo-seal" viewBox="0 0 100 100" aria-hidden="true">
+          <path id="sealring" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="50" cy="50" r="31" fill="none" stroke="currentColor" stroke-width="1"/>
+          <text font-family="IBM Plex Mono" font-size="7.6" letter-spacing="2" fill="currentColor">
+            <textPath href="#sealring" startOffset="2%">B.C.S. CANDIDATE · CARLETON</textPath>
+          </text>
+        </svg>
+      </div>
+
+      <div class="ledger-id">
+        <div class="row"><span>Name</span><span>Gloria Li</span></div>
+        <div class="row"><span>Program</span><span>B.Comp.Sc., Carleton University</span></div>
+        <div class="row"><span>Based</span><span>Ottawa, Ontario</span></div>
+        <div class="row"><span>Minors</span><span>French &amp; Music</span></div>
+      </div>
+
+      <h1 class="home-name">Gloria<br><em>Li</em></h1>
+      <p class="home-bio">Computer science student who spends the week modernizing government systems and the weekend on the taekwondo mat. Building things that hold up under both kinds of pressure.</p>
+
+      <div class="home-btns">
+        <button class="hbtn primary" onclick="goTo('experience',document.querySelectorAll('.tab-btn')[1])">View experience →</button>
+        <button class="hbtn" onclick="goTo('projects',document.querySelectorAll('.tab-btn')[2])">Projects →</button>
+        <a href="mailto:gloriali4cu@gmail.com" class="hbtn">Get in touch</a>
+        <a id="resume-dl-btn" class="hbtn" download="Gloria_Li_Resume.pdf" href="assets/resume.pdf">↓ Résumé</a>
+      </div>
+    </div>
+
+    <div class="home-right">
+      <div class="docket">
+        <div class="docket-title"><span>Field notes</span><span>2022 – present</span></div>
+
+        <div class="stat-grid">
+          <div class="stat-cell"><span class="n">01</span><span class="val">03</span><span class="lbl">Co-op placements</span></div>
+          <div class="stat-cell"><span class="n">02</span><span class="val">12+</span><span class="lbl">Languages &amp; frameworks</span></div>
+          <div class="stat-cell"><span class="n">03</span><span class="val">03</span><span class="lbl">Natural languages spoken</span></div>
+          <div class="stat-cell"><span class="n">04</span><span class="val">2022</span><span class="lbl">Competing in taekwondo since</span></div>
+        </div>
+
+        <div class="docket-quote">
+          <p>"Every competition teaches me something a classroom never could."</p>
+          <span>— on training through Taekwondo, Phoenix Taekwondo Academy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY TICKER — work + projects, chronological -->
+  <div class="ticker-board">
+    <span class="ticker-board-tab">Activity log</span>
+    <div class="ticker-viewport">
+      <div class="ticker-move">
+        <div class="ticker-group">
+          <span class="ticker-item"><b>May 2026 — Present</b>IT Summer Student Co-op · Department of Justice Canada</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item"><b>May 2026 — Present</b>E-Commerce Technology Intern · Prookie Protein — SEO score to 99/100</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item"><b>Oct – Dec 2025</b>Built the Health &amp; Fitness Club Management System</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item"><b>Jun – Sep 2025</b>Student Technical Team · Public Services &amp; Procurement Canada</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item"><b>Jan – May 2025</b>Built the Insulin Pump Simulator</span>
+          <span class="ticker-sep">◆</span>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span class="ticker-item"><b>May 2026 — Present</b>IT Summer Student Co-op · Department of Justice Canada</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item"><b>May 2026 — Present</b>E-Commerce Technology Intern · Prookie Protein — SEO score to 99/100</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item"><b>Oct – Dec 2025</b>Built the Health &amp; Fitness Club Management System</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item"><b>Jun – Sep 2025</b>Student Technical Team · Public Services &amp; Procurement Canada</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item"><b>Jan – May 2025</b>Built the Insulin Pump Simulator</span>
+          <span class="ticker-sep">◆</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="foot-name">Gloria Li</span>
+    <div class="foot-links">
+      <a href="mailto:gloriali4cu@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="M3 6l9 7 9-7"/></svg>Email</a>
+      <a href="https://github.com/glorialii" target="_blank"><svg viewBox="0 0 98 96"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"></path></svg>GitHub</a>
+      <a href="https://linkedin.com/in/gloria-li-51339a240" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05C19.9 8 21 10.3 21 14.13V23h-4v-8.2c0-1.95-.03-4.46-2.72-4.46-2.72 0-3.14 2.13-3.14 4.32V23h-4V8z"/></svg>LinkedIn</a>
+      <a id="resume-dl-footer" download="Gloria_Li_Resume.pdf" href="assets/resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2.5A1.5 1.5 0 005.5 21h13a1.5 1.5 0 001.5-1.5V17"/></svg>Résumé</a>
+    </div>
+    <span class="foot-copy">B.C.S. · Carleton University · 2022–Present</span>
+  </footer>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="page" id="page-experience">
+  <div class="page-hdr">
+    <div>
+      <div class="page-hdr-label">Field record</div>
+      <h2 class="page-hdr-title">Where I've worked</h2>
+    </div>
+    <div class="page-hdr-ref">REF. GL / EMPLOYMENT</div>
+  </div>
+  <div class="exp-wrap">
+    <div class="exp-item">
+      <div>
+        <span class="exp-tab">MAY 2026 — PRESENT</span>
+        <div class="exp-org">Department of Justice Canada<br>Information Solutions Branch</div>
+      </div>
+      <div>
+        <h3 class="exp-role">IT Summer Student Co-op</h3>
+        <ul class="exp-bullets">
+          <li>Supported digital transformation by evaluating and documenting business processes and technical requirements.</li>
+          <li>Assessed GitHub, Microsoft Copilot, ChatGPT, Claude, and related AI tools to support technology adoption.</li>
+          <li>Collaborated cross-functionally to identify process improvements and support modernization efforts.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div>
+        <span class="exp-tab">MAY 2026 — PRESENT</span>
+        <div class="exp-org">Prookie Protein · Riipen Labs<br>Remote</div>
+      </div>
+      <div>
+        <h3 class="exp-role">E-Commerce Technology Intern</h3>
+        <ul class="exp-bullets">
+          <li><b class="flex">Raised the store's SEO score to 99/100</b> through keyword research, technical fixes, and on-page content optimization.</li>
+          <li>Optimizing a Shopify-based e-commerce platform and driving digital growth initiatives.</li>
+          <li>Leveraging AI analytics tools to evaluate competitors and recommend UX improvements.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div>
+        <span class="exp-tab">JUN — SEP 2025</span>
+        <div class="exp-org">Public Services &amp; Procurement Canada<br>Government of Canada</div>
+      </div>
+      <div>
+        <h3 class="exp-role">Student Technical Team — Summer Co-op</h3>
+        <ul class="exp-bullets">
+          <li>Contributed to modernization of the CCRM system, replacing legacy case management tools.</li>
+          <li>Analyzed and reverse-engineered C# and Excel-based financial calculators, documenting logic for migration.</li>
+          <li>Validated data schemas to support the transition to structured, database-backed systems.</li>
+          <li>Produced GCdocs-aligned technical documentation as part of an Agile team.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <span class="foot-name">Gloria Li</span>
+    <div class="foot-links">
+      <a href="mailto:gloriali4cu@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="M3 6l9 7 9-7"/></svg>Email</a>
+      <a href="https://github.com/glorialii" target="_blank"><svg viewBox="0 0 98 96"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"></path></svg>GitHub</a>
+      <a href="https://linkedin.com/in/gloria-li-51339a240" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05C19.9 8 21 10.3 21 14.13V23h-4v-8.2c0-1.95-.03-4.46-2.72-4.46-2.72 0-3.14 2.13-3.14 4.32V23h-4V8z"/></svg>LinkedIn</a>
+      <a download="Gloria_Li_Resume.pdf" href="assets/resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2.5A1.5 1.5 0 005.5 21h13a1.5 1.5 0 001.5-1.5V17"/></svg>Résumé</a>
+    </div>
+    <span class="foot-copy">B.C.S. · Carleton University · 2022–Present</span>
+  </footer>
+</div>
+
+<!-- PROJECTS -->
+<div class="page" id="page-projects">
+  <div class="page-hdr">
+    <div>
+      <div class="page-hdr-label">Exhibits</div>
+      <h2 class="page-hdr-title">Things I've built</h2>
+    </div>
+    <div class="page-hdr-ref">REF. GL / PROJECTS</div>
+  </div>
+  <div class="proj-grid">
+    <div class="proj-card r" data-exhibit="EXHIBIT C">
+      <div class="proj-tag">2026 · IN PROGRESS · SOLO PROJECT</div>
+      <h3 class="proj-title">Sola — 2D Room Planner</h3>
+      <p class="proj-desc">A room planner that checks whether a layout actually <em>works</em>, not just whether the furniture fits. It started at 3am while planning a shared dorm room with my sister — trying to figure out beds and desks that gave us both privacy, good light, and room to walk. Sola flags blocked walkways, drawer and chair clearance, and door-swing space as you place furniture, and will eventually estimate how sunlight moves through the room by location, orientation, and time of year.</p>
+      <div class="proj-stack">
+        <span class="sp">React</span><span class="sp">Zustand</span><span class="sp">SVG</span><span class="sp">Supabase</span>
+      </div>
+      <span class="status-tag">● Building — repo coming soon</span>
+    </div>
+    <div class="proj-card g" data-exhibit="EXHIBIT A">
+      <div class="proj-tag">JAN – MAY 2025 · TEAM OF 4 · CARLETON UNIVERSITY</div>
+      <h3 class="proj-title">Insulin Pump Simulator</h3>
+      <p class="proj-desc">Interactive simulation of a medical insulin pump system with real-time glucose graphs, insulin level tracking, and battery status. Built error handling for critical states — low battery, sensor failure — and documented the system with UML diagrams and a requirements traceability matrix.</p>
+      <div class="proj-stack">
+        <span class="sp">C++</span><span class="sp">Qt</span><span class="sp">OOP</span><span class="sp">UML</span>
+      </div>
+      <a href="https://github.com/nik3tR/Insulin-Pump-Sim" target="_blank" class="gh-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96" width="14" height="14" style="vertical-align:middle;margin-right:2px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"></path></svg>View on GitHub ↗</a>
+    </div>
+    <div class="proj-card b" data-exhibit="EXHIBIT B">
+      <div class="proj-tag">OCT – DEC 2025 · COMP3005 · CARLETON UNIVERSITY</div>
+      <h3 class="proj-title">Health &amp; Fitness Club Management System</h3>
+      <p class="proj-desc">Full relational database system supporting members, trainers, and admins. Designed 3NF schemas, ER diagrams, and relational mappings across 10+ entities, plus a Python CLI for metric tracking and class registration. SQL queries aggregate data across multiple tables to optimize retrieval of the latest records.</p>
+      <div class="proj-stack">
+        <span class="sp">PostgreSQL</span><span class="sp">Python</span><span class="sp">SQL</span><span class="sp">ER Design</span>
+      </div>
+      <a href="https://github.com/glorialii/health-fitness-club-system" target="_blank" class="gh-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96" width="14" height="14" style="vertical-align:middle;margin-right:2px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"></path></svg>View on GitHub ↗</a>
+    </div>
+  </div>
+  <footer>
+    <span class="foot-name">Gloria Li</span>
+    <div class="foot-links">
+      <a href="mailto:gloriali4cu@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="M3 6l9 7 9-7"/></svg>Email</a>
+      <a href="https://github.com/glorialii" target="_blank"><svg viewBox="0 0 98 96"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"></path></svg>GitHub</a>
+      <a href="https://linkedin.com/in/gloria-li-51339a240" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05C19.9 8 21 10.3 21 14.13V23h-4v-8.2c0-1.95-.03-4.46-2.72-4.46-2.72 0-3.14 2.13-3.14 4.32V23h-4V8z"/></svg>LinkedIn</a>
+      <a download="Gloria_Li_Resume.pdf" href="assets/resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2.5A1.5 1.5 0 005.5 21h13a1.5 1.5 0 001.5-1.5V17"/></svg>Résumé</a>
+    </div>
+    <span class="foot-copy">B.C.S. · Carleton University · 2022–Present</span>
+  </footer>
+</div>
+
+<!-- SKILLS -->
+<div class="page" id="page-skills">
+  <div class="page-hdr">
+    <div>
+      <div class="page-hdr-label">Index</div>
+      <h2 class="page-hdr-title">Technical toolkit</h2>
+    </div>
+    <div class="page-hdr-ref">REF. GL / SKILLS</div>
+  </div>
+  <div class="skills-wrap">
+    <div class="skills-row">
+      <div class="sk-card">
+        <div class="sk-lbl">Languages</div>
+        <ul class="sk-list">
+          <li>C / C++ / C#</li><li>Java / Python</li><li>JavaScript / Ruby</li><li>SQL / HTML / CSS</li><li>Haskell</li>
+        </ul>
+      </div>
+      <div class="sk-card">
+        <div class="sk-lbl">Platforms &amp; frameworks</div>
+        <ul class="sk-list">
+          <li>React / Node.js</li><li>REST APIs</li><li>PostgreSQL / MongoDB</li><li>Google Cloud Platform</li><li>Linux / Shopify</li>
+        </ul>
+      </div>
+      <div class="sk-card">
+        <div class="sk-lbl">Domains</div>
+        <ul class="sk-list">
+          <li>Computer networks</li><li>Cryptography basics</li><li>Secure programming</li><li>Agile / GCdocs</li><li>Git / VS Code / IntelliJ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skills-row2">
+      <div class="sk-card">
+        <div class="sk-lbl">Natural languages</div>
+        <ul class="sk-list">
+          <li>English — fluent</li><li>French — minor, Carleton</li><li>Chinese — fluent</li>
+        </ul>
+      </div>
+      <div class="sk-card">
+        <div class="sk-lbl">Tools &amp; workflow</div>
+        <ul class="sk-list">
+          <li>Git / GitHub</li><li>VS Code / Visual Studio / IntelliJ</li><li>Excel / GCdocs</li><li>Microsoft Copilot / Claude</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <span class="foot-name">Gloria Li</span>
+    <div class="foot-links">
+      <a href="mailto:gloriali4cu@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="M3 6l9 7 9-7"/></svg>Email</a>
+      <a href="https://github.com/glorialii" target="_blank"><svg viewBox="0 0 98 96"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"></path></svg>GitHub</a>
+      <a href="https://linkedin.com/in/gloria-li-51339a240" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05C19.9 8 21 10.3 21 14.13V23h-4v-8.2c0-1.95-.03-4.46-2.72-4.46-2.72 0-3.14 2.13-3.14 4.32V23h-4V8z"/></svg>LinkedIn</a>
+      <a download="Gloria_Li_Resume.pdf" href="assets/resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2.5A1.5 1.5 0 005.5 21h13a1.5 1.5 0 001.5-1.5V17"/></svg>Résumé</a>
+    </div>
+    <span class="foot-copy">B.C.S. · Carleton University · 2022–Present</span>
+  </footer>
+</div>
+
+<!-- TAEKWONDO -->
+<div class="page" id="page-athletics">
+  <div class="page-hdr">
+    <div>
+      <div class="page-hdr-label">Off the clock</div>
+      <h2 class="page-hdr-title">Beyond the keyboard</h2>
+    </div>
+    <div class="page-hdr-ref">REF. GL / ATHLETICS</div>
+  </div>
+  <div class="ath-belt"></div>
+  <div class="ath-grid">
+    <div class="ath-left">
+      <div class="ath-eyebrow">Phoenix Taekwondo Academy · Ottawa, ON</div>
+      <p class="ath-quote">"Every competition teaches me something a classroom never could."</p>
+      <div class="ath-stats">
+        <div><span class="ath-num">14+</span><div class="ath-lbl">Hrs / week</div></div>
+        <div><span class="ath-num">3+</span><div class="ath-lbl">Years competing</div></div>
+      </div>
+    </div>
+    <div class="ath-photo">
+      <img src="assets/taekwondo.png" alt="Gloria competing in taekwondo">
+      <span class="ath-caption">Competition floor · Phoenix Taekwondo Academy</span>
+    </div>
+    <div class="ath-right">
+      <p>Since September 2022 I've trained and competed in taekwondo at Phoenix Taekwondo Academy — while maintaining strong academic standing throughout my degree.</p>
+      <p>I also volunteer coaching students in after-school taekwondo classes, developing <strong>leadership and communication</strong> skills alongside technical discipline.</p>
+      <span class="ath-badge">Competitor · Phoenix Taekwondo Academy · Sept. 2022 – Present</span>
+    </div>
+  </div>
+  <footer>
+    <span class="foot-name">Gloria Li</span>
+    <div class="foot-links">
+      <a href="mailto:gloriali4cu@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="M3 6l9 7 9-7"/></svg>Email</a>
+      <a href="https://github.com/glorialii" target="_blank"><svg viewBox="0 0 98 96"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"></path></svg>GitHub</a>
+      <a href="https://linkedin.com/in/gloria-li-51339a240" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05C19.9 8 21 10.3 21 14.13V23h-4v-8.2c0-1.95-.03-4.46-2.72-4.46-2.72 0-3.14 2.13-3.14 4.32V23h-4V8z"/></svg>LinkedIn</a>
+      <a download="Gloria_Li_Resume.pdf" href="assets/resume.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2.5A1.5 1.5 0 005.5 21h13a1.5 1.5 0 001.5-1.5V17"/></svg>Résumé</a>
+    </div>
+    <span class="foot-copy">B.C.S. · Carleton University · 2022–Present</span>
+  </footer>
+</div>
+
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
